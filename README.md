@@ -71,4 +71,4 @@ FreeRTOS Single Task → Dual Task Priorities → EXTI + Semaphore
 - Each folder contains the full STM32CubeIDE project with source code and configuration files.
 - This repository serves as a personal learning reference for embedded systems and RTOS programming.
 
-Contributions, suggestions, and improvements are welcome! 🙌
+Contributions, suggestions, and improvements are welcome!

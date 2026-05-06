@@ -1,4 +1,4 @@
-# 🚀 STM32F446RE — Embedded Systems & FreeRTOS Lab Experiments
+#  STM32F446RE — Embedded Systems & FreeRTOS Lab Experiments
 
 This repository documents my hands-on lab journey with the **STM32F446RE Nucleo Board**, progressing from bare-metal GPIO programming to real-time operating system concepts using **FreeRTOS** and **STM32CubeIDE**.
 
@@ -6,7 +6,7 @@ Each folder represents a standalone experiment focused on a specific peripheral,
 
 ---
 
-## 📘 Topics Covered
+##  Topics Covered
 
 - GPIO Digital Output & LED Control
 - Digital Input with Push Buttons
@@ -21,7 +21,7 @@ Each folder represents a standalone experiment focused on a specific peripheral,
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 | Folder | Experiment | Description |
 |--------|-----------|-------------|
@@ -38,7 +38,7 @@ Each folder represents a standalone experiment focused on a specific peripheral,
 
 ---
 
-## 🛠 Development Environment
+##  Development Environment
 
 | Tool | Details |
 |------|---------|
@@ -50,7 +50,7 @@ Each folder represents a standalone experiment focused on a specific peripheral,
 
 ---
 
-## 🔗 Experiment Progression
+##  Experiment Progression
 
 ```
 GPIO Output → Button Input → Ultrasonic Sensor → PWM
@@ -64,7 +64,7 @@ FreeRTOS Single Task → Dual Task Priorities → EXTI + Semaphore
 
 ---
 
-## 📎 Notes
+##  Notes
 
 - Experiments 1–5 follow a **bare-metal / HAL-based** approach with polling and software delays.
 - Experiments 6–10 progressively introduce **FreeRTOS** concepts, building on each other.

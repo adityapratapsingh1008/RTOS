@@ -1,11 +1,11 @@
 # Experiment 2 — GPIO Digital Input: Push Button LED Toggle
 
-## 🎯 Aim
+##  Aim
 To interface a push button as digital input and demonstrate LED control by toggling its state on each valid button press.
 
 ---
 
-## 🧰 Apparatus
+##  Apparatus
 
 | Component | Details |
 |-----------|---------|
@@ -16,7 +16,7 @@ To interface a push button as digital input and demonstrate LED control by toggl
 
 ---
 
-## 📖 Theory
+##  Theory
 
 This experiment extends GPIO knowledge from output to **input**, reading the state of the onboard user push button and using it to control the onboard LED.
 
@@ -52,7 +52,7 @@ A simple **software debounce** is applied here — after detecting a press, a sh
 
 ---
 
-## ⚙️ STM32CubeMX Configuration
+##  STM32CubeMX Configuration
 
 ### Step 1 — MCU Selection
 - Open STM32CubeMX → **ACCESS TO MCU SELECTOR**
@@ -101,13 +101,13 @@ A simple **software debounce** is applied here — after detecting a press, a sh
 
 ### Step 6 — Build Output Settings
 - Right-click project → **Properties → C/C++ Build → Settings → MCU Post Build Outputs**
-- Enable ✅ **Convert to Binary File (.bin)**
-- Enable ✅ **Convert to Intel Hex File (.hex)**
+- Enable  **Convert to Binary File (.bin)**
+- Enable  **Convert to Intel Hex File (.hex)**
 - Click **Apply and Close**
 
 ---
 
-## 💻 Code
+##  Code
 
 Open `Core/Src/main.c` and add the following inside the `while(1)` loop between the user code markers:
 
@@ -147,11 +147,11 @@ Read PC13
         Loop again
 ```
 
-> ⚠️ Always write your code between the `USER CODE BEGIN` and `USER CODE END` comment markers to prevent it from being overwritten on CubeMX code regeneration.
+>  Always write your code between the `USER CODE BEGIN` and `USER CODE END` comment markers to prevent it from being overwritten on CubeMX code regeneration.
 
 ---
 
-## 🔨 Build & Flash
+##  Build & Flash
 
 1. Connect the Nucleo board via USB
 2. Click **Build** (hammer icon) → verify **0 errors**
@@ -161,7 +161,7 @@ Read PC13
 
 ---
 
-## 📊 Observations
+##  Observations
 
 ### Button Press vs LED State
 
@@ -181,13 +181,13 @@ Read PC13
 
 ---
 
-## ✅ Result
+##  Result
 
 For all valid button presses, the LED on PA5 toggled exactly once per press, and the new state was maintained after button release. This confirms correct configuration of **PC13 as a digital input** and **PA5 as a digital output**, with functional software-based debouncing using `HAL_Delay()`.
 
 ---
 
-## 💡 Key Takeaways
+##  Key Takeaways
 
 - A microcontroller does not inherently understand a "button press" as an event — it only reads binary logic levels (HIGH/LOW). The programmer is responsible for interpreting the signal transition.
 - **Active-low logic** is common in embedded hardware design. Always check the board schematic to determine the idle (unpressed) state of an input pin.
@@ -197,7 +197,7 @@ For all valid button presses, the LED on PA5 toggled exactly once per press, and
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 02_PushButton_LED_Toggle/

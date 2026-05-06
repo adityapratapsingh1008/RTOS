@@ -1,8 +1,8 @@
-#  STM32F446RE — Embedded Systems & FreeRTOS Lab Experiments
+#  STM32F446RE — Firmware Development using FreeRTOS
 
-This repository documents my hands-on lab journey with the **STM32F446RE Nucleo Board**, progressing from bare-metal GPIO programming to real-time operating system concepts using **FreeRTOS** and **STM32CubeIDE**.
+This repository documents my hands-on projects with the **STM32F446RE Nucleo Board**, progressing from bare-metal GPIO programming to real-time operating system concepts using **FreeRTOS**, **STM32CubeIDE** and **STM32CubeMX**.
 
-Each folder represents a standalone experiment focused on a specific peripheral, concept, or RTOS feature of the STM32 microcontroller.
+Each folder represents a standalone project focused on a specific peripheral, concept, or RTOS feature of the STM32 microcontroller.
 
 ---
 

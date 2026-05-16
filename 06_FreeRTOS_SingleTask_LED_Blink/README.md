@@ -1,4 +1,4 @@
-# 🟢 EXPERIMENT 6 — FreeRTOS: First Task & SWV ITM Tracing
+# 🟢 FreeRTOS: First Task & SWV ITM Tracing
 
 > Your first step into the RTOS world. One task. One LED. One console message. But an entirely new paradigm.
 
@@ -170,20 +170,7 @@ Expected output on Port 0:
 
 ---
 
-## 📊 Observation Template
 
-Fill in during the lab session:
-
-| Parameter | Observed Value |
-|-----------|---------------|
-| LED blink period (ms) | |
-| Console messages per second | |
-| Compilation errors | |
-| Compilation warnings | |
-| Observation duration (min) | |
-| Any timing drift noticed? | |
-
----
 
 ## 🆚 FreeRTOS `osDelay` vs. Super Loop `HAL_Delay`
 
@@ -194,14 +181,6 @@ Fill in during the lab session:
 | Timing accuracy | Depends on SysTick | Managed by RTOS kernel |
 | Use in ISR | Allowed | ❌ Not allowed |
 
----
-
-## ❓ Reflection Questions
-
-1. How does `osDelay(500)` differ conceptually from `HAL_Delay(500)` in a super loop?
-2. What advantages appear *now* with one task, and what more appears when you add a second?
-3. What did you observe in the SWV ITM console — was the output synchronized with LED toggling?
-4. If the LED didn't blink or no messages appeared, which configuration steps would you recheck first?
 
 ---
 

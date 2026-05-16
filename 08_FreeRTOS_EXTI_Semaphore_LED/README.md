@@ -1,4 +1,4 @@
-# 🔔 EXPERIMENT 8 — External Interrupt + Binary Semaphore
+# 🔔 External Interrupt + Binary Semaphore
 
 > Don't do work in an ISR. Signal a task to do it instead.
 
@@ -193,15 +193,6 @@ myBinarySem01Handle = osSemaphoreNew(1, 0, &myBinarySem01_attributes);
 
 ---
 
-## 📊 Observation Table
-
-| S.No | Query | Response |
-|------|-------|----------|
-| 1 | State of LED_Control task at application start | BLOCKED |
-| 2 | State when button is pressed | READY → RUNNING |
-| 3 | Does LED_Control run continuously after button press? | No — blocks again |
-| 4 | Priority level of EXTI interrupt line | |
-
 ---
 
 ## 🔬 Bonus Experiment — Behavior Change
@@ -221,18 +212,6 @@ for (;;) {
     printf("Inside LEDControl Task\n");
 }
 ```
-
-**Question:** What changes when the timeout (100 ms) expires without a button press?
-
----
-
-## ❓ Reflection Questions
-
-1. Why doesn't `LED_Control` run continuously after the button is pressed?
-2. What is a breakpoint and how is it useful in debug mode for this experiment?
-3. Trace through the full `osSemaphoreAcquire` loop — what happens at each iteration?
-4. What behavior changes when you remove the `if (... == osOK)` check?
-
 ---
 
 ## ✅ Result

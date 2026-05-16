@@ -1,4 +1,4 @@
-# Experiment 2 — GPIO Digital Input: Push Button LED Toggle
+# GPIO Digital Input: Push Button LED Toggle
 
 ##  Aim
 To interface a push button as digital input and demonstrate LED control by toggling its state on each valid button press.

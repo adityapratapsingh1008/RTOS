@@ -1,4 +1,4 @@
-# ⚡ EXPERIMENT 4 — PWM LED Brightness Control
+# ⚡ PWM LED Brightness Control
 
 > **Control light with math.** A square wave with a variable duty cycle becomes analog brightness.
 
@@ -124,18 +124,6 @@ while (1) {
 
 ---
 
-## 📊 Observation Table
-
-| CCR Value | Duty Cycle (%) | Brightness Level | Observation |
-|-----------|---------------|-----------------|-------------|
-| 0 | 0% | | |
-| 250 | 25% | | |
-| 500 | 50% | | |
-| 750 | 75% | | |
-| 1000 | 100% | | |
-
----
-
 ## 🔁 Running the Program
 
 ```
@@ -155,16 +143,6 @@ while (1) {
 | Fixed 33% brightness | Remove loops; set `CCR = 333` | LED stays dim |
 | Higher PWM frequency | Reduce `ARR` to 99 | 10x frequency (check flicker) |
 | Lower PWM frequency | Increase `ARR` to 9999 | Visible flicker at ~10Hz |
-
----
-
-## ❓ Reflection Questions
-
-1. What is PWM and how does duty cycle affect average output voltage?
-2. Calculate PWM frequency if PSC = 179 and ARR = 499 (90 MHz clock).
-3. What happens if PWM frequency drops to 10 Hz — will the LED flicker?
-4. How do you achieve exactly 33% duty cycle with ARR = 999?
-5. How would you control an external motor speed using this same technique?
 
 ---
 

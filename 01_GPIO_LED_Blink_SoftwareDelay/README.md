@@ -1,4 +1,4 @@
-# Experiment 1 — GPIO Digital Output: LED Blink with Software Delay
+# GPIO Digital Output: LED Blink with Software Delay
 
 ## 🎯 Aim
 To configure a GPIO pin of **STM32F446RE** as a digital output and verify LED blinking operation using software delay routines.

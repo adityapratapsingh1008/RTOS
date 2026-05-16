@@ -1,4 +1,4 @@
-# 🎫 EXPERIMENT 10 — Counting Semaphore & Shared Resource Control
+# 🎫 Counting Semaphore & Shared Resource Control
 
 > A binary semaphore is a single ticket.  
 > A counting semaphore is a **pool of tickets**.
@@ -205,18 +205,9 @@ With count=1 (change for comparison):
 
 ---
 
-## 📊 Observation Table
 
-| # | Query | Response |
-|---|-------|----------|
-| 1 | How many tasks can use the ITM trace resource concurrently? | |
-| 2 | Describe the interleaving pattern in the trace output | |
-| 3 | Type of scheduling that leads to interleaving | |
-| 4 | What different outcome can you produce by changing the code? | |
 
----
-
-## 🔬 Experiment Variations
+## Variations
 
 | Change | Expected Outcome |
 |--------|-----------------|
@@ -243,15 +234,6 @@ Mutex:
 Use counting semaphores for: connection pools, hardware unit pools, rate limiting
 Use mutexes for: shared data structures, single peripherals (SPI, UART)
 ```
-
----
-
-## ❓ Reflection Questions
-
-1. What does "thread-safe" mean — and why does a counting semaphore with count > 1 not fully guarantee it for a single UART/ITM port?
-2. Implement a fast producer + slow consumer using the counting semaphore. What happens when count reaches 0?
-3. Implement a slow producer + fast consumer. What happens when count reaches max?
-4. Write a reflection summarizing your key learnings about RTOS-based system design across all experiments.
 
 ---
 

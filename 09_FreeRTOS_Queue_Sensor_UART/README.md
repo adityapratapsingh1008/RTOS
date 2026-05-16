@@ -1,4 +1,4 @@
-# 📬 EXPERIMENT 9 — Inter-Task Communication via FreeRTOS Queue
+# 📬 Inter-Task Communication via FreeRTOS Queue
 
 > Semaphores say *"something happened."*  
 > Queues say *"something happened — and here's the data."*
@@ -187,18 +187,6 @@ Expected SWV output:
 
 ---
 
-## 📊 Observation Table
-
-| # | Query | Response |
-|---|-------|----------|
-| 1 | Priority of `Sensor_Read` task | |
-| 1 | Priority of `Motion_Control` task | |
-| 2 | Which task has higher priority? | Both equal / Sensor / Motion |
-| 3 | Which task runs more frequently in SWV? | Sensor / Motion / Both alternate |
-| 4 | Does consumer receive every value produced? | Yes / No |
-
----
-
 ## 🔧 Modifications to Try
 
 ### Replace Simulated Data with Real HC-SR04
@@ -209,15 +197,6 @@ Change queue size to `3`, keep `osDelay(1000)` in producer but remove `osDelay` 
 
 ### Test Queue Empty Behavior
 Add `osDelay(2000)` in consumer and `osDelay(1000)` in producer — observe consumer blocks for 2 seconds at a time waiting for new data.
-
----
-
-## ❓ Reflection Questions
-
-1. What does "thread-safe" mean in the context of a FreeRTOS queue vs. a global variable?
-2. Implement and test: **fast producer, slow consumer** — what happens when the queue fills?
-3. Implement and test: **slow producer, fast consumer** — what does the consumer do while waiting?
-4. Why is `osWaitForever` used as the timeout — what would happen with `0` (no wait)?
 
 ---
 

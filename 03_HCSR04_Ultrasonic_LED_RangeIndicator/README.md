@@ -1,4 +1,4 @@
-# ◈ EXPERIMENT 3 — HC-SR04 Ultrasonic Distance Sensor
+# ◈ HC-SR04 Ultrasonic Distance Sensor
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -178,17 +178,6 @@ void usDelay(uint32_t uSec) {
 
 ---
 
-## 📊 Observation Table
-
-| S.No | Actual Distance (cm) | UART Reading (cm) | LED Status | Echo Pulse Width (µs) | Remarks |
-|------|---------------------|-------------------|------------|----------------------|---------|
-| 1 | 5 | | | | |
-| 2 | 10 | | | | |
-| 3 | 15 | | | | |
-| 4 | 20 | | | | |
-| 5 | 25 | | | | |
-
----
 
 ## 🔁 Running the Program
 
@@ -198,16 +187,6 @@ void usDelay(uint32_t uSec) {
 3. Click Resume ▶ to execute
 4. Open serial terminal at 115200 baud to see distance values
 ```
-
----
-
-## ❓ Reflection Questions
-
-1. Why is the TIM4 prescaler set to `84 - 1`?
-2. How do `ARR`, `EGR`, `SR`, and `CR1` work together in `usDelay()`?
-3. Why is `usDelay(2)` called *inside* the echo-width measurement loop?
-4. What does `if(uSec < 2) uSec = 2;` guard against?
-5. How would you extend this into an obstacle-avoidance robot?
 
 ---
 

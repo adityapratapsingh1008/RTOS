@@ -1,4 +1,4 @@
-# 🔄 EXPERIMENT 5 — Super Loop Architecture
+# 🔄 Super Loop Architecture
 
 > *"No RTOS. No blocking. Just clever use of a millisecond clock."*
 
@@ -163,16 +163,6 @@ while (1) {
 
 ---
 
-## 📊 Observation Table
-
-| S.No | Item | Status / Value | Remarks |
-|------|------|---------------|---------|
-| 1 | LED | | Toggles every 500 ms? |
-| 2 | Button Pressed | | LED forced ON when held? |
-| 3 | IR Sensor (ir_value) | | Value changes with distance? |
-
----
-
 ## 🔁 Running the Program
 
 ```
@@ -192,16 +182,6 @@ while (1) {
 | Change button poll to 100 ms | `if (button_counter_ms >= 100)` |
 | Print ir_value over UART | Add `sprintf` + `HAL_UART_Transmit` in the IR task block |
 | Add a 4th task (e.g., buzzer) | Add `buzzer_counter_ms`, increment it like the others |
-
----
-
-## ❓ Reflection Questions
-
-1. How does the super loop differ from `HAL_Delay()`-based timing, and why is it better for multi-task systems?
-2. What role do the three separate software counters play in achieving independent task rates?
-3. What did you observe in `ir_value` as you moved an object closer to the IR sensor?
-4. How do PC13 Pull-up and PA5 Output configurations work together for button-controlled LED?
-5. When would a super loop *not* be enough, and you'd need an RTOS instead?
 
 ---
 

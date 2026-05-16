@@ -1,4 +1,4 @@
-# ⚖️ EXPERIMENT 7 — FreeRTOS Dual Tasks & Priority Scheduling
+# ⚖️ FreeRTOS Dual Tasks & Priority Scheduling
 
 > Two tasks. Same delay. Different priorities. Completely different outcomes.
 
@@ -187,15 +187,6 @@ High vs Low:
 | Demonstrate starvation | Set Task_1 to `osPriorityRealtime`, Task_2 to `osPriorityLow` — Task_2 LED should stop |
 | Add a third task | Create `LED_3` on a third GPIO pin, set intermediate priority |
 | Remove `osDelay` from Task_1 | Task_1 will spin indefinitely and starve Task_2 completely |
-
----
-
-## ❓ Reflection Questions
-
-1. How does the scheduler share CPU between two equal-priority tasks both calling `osDelay(500)`?
-2. What happens if one task has **no** `osDelay()` — what do you expect on the LEDs?
-3. Compare this two-task RTOS design vs. a super loop toggling two LEDs. What are the structural advantages?
-4. How does SWV ITM tracing help verify correct RTOS behavior without extra GPIO or UART overhead?
 
 ---
 
